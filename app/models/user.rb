@@ -6,5 +6,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :booking_types 
+  has_many :booking_types
+
+  validates :booking_link, presence: true
 end
